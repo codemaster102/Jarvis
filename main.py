@@ -1,22 +1,22 @@
-import pyttsx3
-import speech_recognition as sr
+import pyttsx3 #pip install pyttsx3
+import speech_recognition as sr #pip install sr
 import time
-import wikipedia
-import webbrowser
-import os
-import subprocess
+import wikipedia #pip install wikipedia
+import webbrowser #pip install webbrowser
+import os #pip install os
+import subprocess #pip install subprocess
 from PyDictionary import PyDictionary
-import requests
+import requests #pip install requests
 import datetime
-from countryinfo import CountryInfo
-import pyperclip
-import random
-from win10toast import ToastNotifier
+from countryinfo import CountryInfo #pip install CountryInfo
+import pyperclip #pip install pyperclip
+import random 
+from win10toast import ToastNotifier #pip install win10toast
 
-master = "Aromal"
+master = "your_name"
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
+engine.setProperty('voice', voices[0].id) #Use voices[1] for a woman's voice
 
 shopping_list = []
 
@@ -101,7 +101,7 @@ def main():
             ':(': '😟',
             ';)': '😉',
             '<3': '♥',
-            '¯\_( ͡❛ ͜ʖ ͡❛)_/¯': '🤷‍♂️'
+            '¯\_( ͡❛ ͜ʖ ͡❛)_/¯': '🤷‍'
         }
 
         output = ""
@@ -178,7 +178,7 @@ def main():
             speak("ok")
 
     elif "weather" in query or "what's the weather" in query:
-        api_key = "http://api.openweathermap.org/data/2.5/weather?q=Brampton&appid=8ac80f9a96e20266674ae577d21d29ed"
+        api_key = "http://api.openweathermap.org/data/2.5/weather?q=" + your_city + "&appid=" + api_key
         json_data = requests.get(api_key).json()
         description = json_data['weather'][0]['description']
         temperature = int(json_data['main']['temp'])
