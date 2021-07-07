@@ -1,2 +1,3 @@
-# Jarvis
-This an assistant for computers that I made using Python.
+# Jarvis - Computer Assitant
+
+I have created a python voice assitant, which I have named Jarvis (Iron man's personal assistant.) Though it isn't as sophisticated and complicated like the real Jarvis, It still includes the execution of basic tasks like telling you the time, date, directions to a certain place, searching google and wikipedia, etc. All the libraries needed for my project are imported in the beginning of the file. These imports vary from the basis of the program (speech_recognition) to Pydictionary to find the definition, synonyms, and antonyms of a word. The program is based on an if else statement that executes basic tasks based on what the user says. There is also a try except statement for follow up questions from the user, untlil the user indicates it to stop.
